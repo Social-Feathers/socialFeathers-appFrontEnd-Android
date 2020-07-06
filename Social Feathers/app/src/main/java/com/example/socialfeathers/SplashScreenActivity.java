@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
-    final int delay = 9000;          //delay time to start next activity.
+    final int delay = 500;          //delay time to start next activity.
 
     static ImageView logoView;      //logo ImageView
 
@@ -30,9 +30,11 @@ public class SplashScreenActivity extends AppCompatActivity {
         int screenWidth = displayMetrics.widthPixels;
 
         //setting logo height and width
-        logoView.getLayoutParams().height = screenWidth/2;
-        logoView.getLayoutParams().width = screenWidth/2;
+        logoView.getLayoutParams().height = screenWidth*3/4;
+        logoView.getLayoutParams().width = screenWidth*3/4;
 
+
+//        logoView.setImageResource(R.drawable.);
 
         // move to home screen
         final Handler handler = new Handler();

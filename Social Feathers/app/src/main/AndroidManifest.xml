@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:theme="@style/HomeTheme"
             android:name=".HomeActivity"
             android:label="@string/app_name">
         </activity>
