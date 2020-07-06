@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Social Feathers</string>
+    <string name="facebook_app_id">600039564271036</string>
+    <string name="fb_login_protocol_scheme">fb600039564271036</string>
+    <string name="partnerKey">QuR0282ea91aa83fa45cb85182c3f994f5b8f</string>
+
+</resources>
