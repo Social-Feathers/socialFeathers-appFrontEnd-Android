@@ -1,16 +1,16 @@
-package com.example.socialfeathers.ui.event5;
+package com.example.socialfeathers.ui.profile;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class Event5ViewModel extends ViewModel {
+public class ProfileViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public Event5ViewModel() {
+    public ProfileViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Event 5 fragment");
+        mText.setValue("This is profile fragment");
     }
 
     public LiveData<String> getText() {

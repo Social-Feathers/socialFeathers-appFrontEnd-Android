@@ -1,4 +1,4 @@
-package com.example.socialfeathers.ui.event4;
+package com.example.socialfeathers.ui.profile;
 
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -15,19 +15,18 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.socialfeathers.R;
-import com.example.socialfeathers.ui.add_event.AddEventViewModel;
 
-public class Event4Fragment extends Fragment {
+public class ProfileFragment extends Fragment {
 
-    private Event4ViewModel event4ViewModel;
+    private ProfileViewModel profileViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        event4ViewModel =
-                ViewModelProviders.of(this).get(Event4ViewModel.class);
+        profileViewModel =
+                ViewModelProviders.of(this).get(ProfileViewModel.class);
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
         final TextView textView = root.findViewById(R.id.text_dashboard);
-        event4ViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        profileViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
@@ -35,4 +34,5 @@ public class Event4Fragment extends Fragment {
         });
         return root;
     }
+
 }

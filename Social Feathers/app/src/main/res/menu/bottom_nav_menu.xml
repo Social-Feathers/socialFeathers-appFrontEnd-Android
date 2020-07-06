@@ -17,13 +17,13 @@
         android:title="@string/title_add_event" />
 
     <item
-        android:id="@+id/navigation_event_4"
+        android:id="@+id/navigation_events"
         android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_event_4" />
+        android:title="@string/title_events" />
 
     <item
-        android:id="@+id/navigation_event_5"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_event_5" />
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/title_profile" />
 
 </menu>
