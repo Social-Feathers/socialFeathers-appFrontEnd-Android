@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Social Feathers</string>
+    <string name="title_home">Home</string>
+    <string name="title_events">Events</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_add_event">Add Event</string>
+    <string name="title_notifications">Notifications</string>
+</resources>
