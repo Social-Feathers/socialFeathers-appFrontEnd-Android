@@ -2,13 +2,10 @@ package com.example.socialfeathers;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Locale;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Service;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,11 +13,8 @@ import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
-import android.os.Bundle;
-import android.os.IBinder;
 import android.provider.Settings;
 import android.util.Log;
 
@@ -39,6 +33,9 @@ public class GPSProvider {
     // LocationRequest Config Constants
     private static final int MAX_GPS_UPDATE_INTERVAL = 10;
     private static final int FASTEST_GPS_UPDATE_INTERVAL = 2;
+
+    // Geo-coder Config variables
+    private static final int MAX_RESULT_FOR_GEOCODE = 1;
 
     // request code for GPS Permission
     private static final int PERMISSION_REQUEST_CODE_GPS = 101;
@@ -63,26 +60,50 @@ public class GPSProvider {
     public static double latitude;
     public static double longitude;
 
+    /**
+     * getter for address (reverse geolocation)
+     * @return address
+     */
     public String getAddress() {
         return address;
     }
 
-    public static void setAddress(String address) {
+    /**
+     * setter for address (reverse geolocation)
+     * @param address set the address (reverse geolocation)
+     */
+    private static void setAddress(String address) {
         GPSProvider.address = address;
     }
 
+    /**
+     * getter for latitude
+     * @return latitude
+     */
     public double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(double latitude) {
+    /**
+     * setter for latitude
+     * @param latitude latitude of the geolocation co-ordinates
+     */
+    private void setLatitude(double latitude) {
         this.latitude = latitude;
     }
 
+    /**
+     * getter for longitude
+     * @return longitude
+     */
     public double getLongitude() {
         return longitude;
     }
 
+    /**
+     * setter for longitude
+     * @param longitude longitude of the geolocation co-ordinates
+     */
     public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
@@ -183,24 +204,37 @@ public class GPSProvider {
     private void setLocationValues(Location location) {
 
         // Set Latitude and longitude
-        latitude = location.getLatitude();
-        longitude = location.getLongitude();
+        setLatitude(location.getLatitude());
+        setLongitude(location.getLongitude());
 
-        Log.e(TAG, "setLocationValues: "+latitude + "," + longitude);
+        Log.e(TAG, "setLocationValues: Lat:"+latitude + ", Long" + longitude);
+
         // Creating a Geo-coder object to get the reverse geo location
         Geocoder geocoder = new Geocoder(mContext);
 
+        //try to get the reverse geo location
         try{
-            List<Address> addressList = geocoder.getFromLocation(latitude,longitude,1);//location.getLatitude(),location.getLongitude(),1);
+            /*
+             * Create a list of address for geo coder.
+             * It may return multiple addresses.
+             */
+            List<Address> addressList = geocoder.getFromLocation(getLatitude(),getLongitude(), MAX_RESULT_FOR_GEOCODE);
+            /*
+             * Get the first AddressLine of the first address.
+             */
             address = addressList.get(0).getAddressLine(0);
 
-            Log.e(TAG, "setLocationValues: "+address );
+            Log.e(TAG, "setLocationValues: address(reverse geolocation):"+address );
+
         } catch (IOException e) {
-            e.printStackTrace();
             Log.e(TAG, "setLocationValues: unable to get reverse geo location from Geo-coder.\n" );
         }
     }
 
+    /**
+     * Check to see if gps is on on the mobile device.
+     * @return true if GPS on, false otherwise.
+     */
     private boolean isGPSOn(){
         final LocationManager locationManager = (LocationManager) mContext.getSystemService(Context.LOCATION_SERVICE);
 
