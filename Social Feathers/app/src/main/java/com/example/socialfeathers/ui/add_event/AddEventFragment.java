@@ -22,8 +22,8 @@ public class AddEventFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         addEventViewModel =
                 ViewModelProviders.of(this).get(AddEventViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
+        View root = inflater.inflate(R.layout.fragment_add_event, container, false);
+        final TextView textView = root.findViewById(R.id.text_add_event);
         addEventViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {

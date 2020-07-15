@@ -5,4 +5,9 @@
     <string name="title_profile">Profile</string>
     <string name="title_add_event">Add Event</string>
     <string name="title_notifications">Notifications</string>
+    <string name="GPS_AlertDialog_Message">"Your GPS seems to be disabled! This app uses GPS to get the location information of the events and user only. This app will function properly only if the GPS is turned on. Do YOu want to turn on GPS?"</string>
+    <string name="AlertDialog_Yes">Yes</string>
+    <string name="AlertDialog_No">No</string>
+    <string name="AlertDialog_Cancel">Cancel</string>
+    <string name="AlertDialog_Ok">Ok</string>
 </resources>
