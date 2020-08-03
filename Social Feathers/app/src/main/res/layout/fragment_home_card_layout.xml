@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:backgroundTint="@color/cardview_light_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/homeCardImageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:scaleType="centerCrop"
+            android:background="@color/cardview_dark_background"
+            android:src="@drawable/pic_1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/background_rectangle_header">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/homeCardUserPic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="20dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pic_2" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/homeCardUsername"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_toEndOf="@+id/homeCardUserPic"
+                android:layout_toStartOf="@+id/homeCardBookmarkButton"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:text="User Name Here"
+                android:textAppearance="@style/TextAppearance.Title"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <ImageButton
+                android:id="@+id/homeCardBookmarkButton"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_baseline_bookmark_24"
+                android:tint="@color/bookmarkIconColor"
+                android:background="@drawable/background_transparent"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/homeCardImageView"
+            android:paddingStart="8dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:text="Place Tag Here"
+            android:textColor="#FFF"
+            android:textAppearance="@style/TextAppearance.Description"
+            android:background="@drawable/background_rectangle_tag"/>
+
+        <ImageButton
+            android:id="@+id/homeCardShareButton"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/homeCardImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="-15dp"
+            android:textAlignment="center"
+            android:src="@drawable/ic_baseline_share_24"
+            android:tint="@color/shareIconColor"
+            android:background="@drawable/background_oval"/>
+
+        <TextView
+            android:id="@+id/homeCardTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homeCardImageView"
+            android:layout_toStartOf="@+id/homeCardShareButton"
+            android:ellipsize="end"
+            android:paddingTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:singleLine="true"
+            android:text="Sample Text"
+            android:textAppearance="@style/TextAppearance.Title"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/homeCardDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homeCardTitle"
+            android:layout_alignParentStart="true"
+            android:paddingStart="10dp"
+            android:paddingEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Date: dd/mm/yyyy"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/homeCardAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homeCardDate"
+            android:layout_alignParentStart="true"
+            android:paddingStart="10dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Address: this is going to be the long address in one line."
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homeCardAddress"
+            android:textColor="@color/cardview_dark_background"
+            android:textAlignment="center"
+            android:text="This is going to be a very long description in multiple lines.(1) if temporary total disability compensation ceased because the employee returned to work, it may be recommenced if the employee is laid off or terminated for reasons other than misconduct if the layoff or termination occurs prior to 90 days after the employee has reached maximum medical improvement. Recommenced temporary total disability compensation under this clause ceases when any of the cessation events in paragraphs (e) to (l) occurs; or"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingStart="25dp"
+            android:background="@drawable/background_rectangle_readmore"
+            android:text="Read more "
+            android:textColor="#444444"
+            android:textAppearance="@style/TextAppearance.Description"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

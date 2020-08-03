@@ -33,10 +33,10 @@ import java.util.List;
 public class SplashScreenActivity extends AppCompatActivity {
 
     private static final int PERMISSION_CODE_GPS_FINE = 101;
-    final int delay = 10000;          //delay time to start next activity.
+    final int delay = 1000;          //delay time to start next activity.
 
-    static ImageView logoView;      //logo ImageView
-
+    static ImageView logoView;//logo ImageView
+    
 
     LocationCallback locationCallback;
 
