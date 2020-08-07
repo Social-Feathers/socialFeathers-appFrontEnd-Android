@@ -20,7 +20,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     private static final int PERMISSION_CODE_GPS_FINE = 101;
     final int delay = 1000;          //delay time to start next activity.
 
-    static ImageView logoView;//logo ImageView
+    private ImageView logoView;      //logo ImageView
     
 
     LocationCallback locationCallback;
@@ -70,9 +70,8 @@ public class SplashScreenActivity extends AppCompatActivity {
                  */
                 gps.stopLocationUpdates();
 
-                Intent homeActivity = new Intent(SplashScreenActivity.this,HomeActivity.class);
-                startActivity(homeActivity);
-                finish();
+                Intent moveToSigninIntent = new Intent(SplashScreenActivity.this,SignInActivity.class);
+                startActivity(moveToSigninIntent);
             }
         }, delay);
     }

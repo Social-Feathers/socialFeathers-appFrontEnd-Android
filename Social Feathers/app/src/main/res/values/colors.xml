@@ -5,6 +5,7 @@
     <color name="colorAccent">#536DFE</color>
     <color name="colorWhite90">#E5FFFFFF</color>
     <color name="colorBlack90">#E5000000</color>
+    <color name="colorBlack50">#88000000</color>
     <color name="colorTransparent">#00000000</color>
     <color name="appBackgroundColor">#485052</color>
     <color name="shareIconBackgroundColor">#dd2196F3</color>

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -18,9 +19,11 @@ import com.google.android.gms.tasks.Task;
 public class SignInActivity extends AppCompatActivity {
 
     private static final int RC_SIGN_IN = 1001;
-    private static final String TAG = "SignINActivity_TAG";
+    private static final String TAG = "SignInActivity_TAG";
     private GoogleSignInClient mGoogleSignInClient;
     private SignInButton googleSignInButton;
+
+    private ImageView logoView;
 
     @Override
     protected void onStart() {
@@ -28,10 +31,9 @@ public class SignInActivity extends AppCompatActivity {
 
         // Check for existing Google Sign In account, if the user is already signed in the GoogleSignInAccount will be non-null.
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-        //TODO:
-        // updateUI(account);
         if(account != null){
-            Log.e(TAG, "onStart: userAlready signed in "+account.getEmail() );
+            Log.e(TAG, "onStart: userAlready signed into google");
+            signinSuccessful();
         }
 
     }
@@ -40,6 +42,18 @@ public class SignInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+
+        //getting screen size
+        ScreenSizeProvider screenSize= new ScreenSizeProvider(this);
+        int screenWidth = screenSize.getScreenWidth();
+        int screenHeight = screenSize.getScreenHeight();
+
+        //check the logo image view
+        logoView = findViewById(R.id.signInScreenLogo);
+        assert logoView != null;
+        logoView.getLayoutParams().width = screenWidth * 3 / 5;
+        logoView.getLayoutParams().height = screenWidth * 3 / 5;
+
 
         // Set the dimensions of the sign-in button.
         googleSignInButton = findViewById(R.id.google_sign_in_button);
@@ -84,13 +98,10 @@ public class SignInActivity extends AppCompatActivity {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 
-            // Signed in successfully, show authenticated UI.
+            // Signed in successfully
+            Log.e(TAG, "google SignIn Successful");
+            signinSuccessful();
 
-            Log.e(TAG, "handleSignInResult: " );
-
-            //TODO:
-            // updateUI(account);
-            Log.e(TAG, "handleSignInResult: "+account.getEmail() );
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
@@ -100,4 +111,8 @@ public class SignInActivity extends AppCompatActivity {
         }
     }
 
+    private void signinSuccessful(){
+        Intent moveToHomeIntent = new Intent(SignInActivity.this,HomeActivity.class);
+        startActivity(moveToHomeIntent);
+    }
 }
