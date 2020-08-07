@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/splashScreenLogoView"
-        android:layout_width="400px"
-        android:layout_height="400px"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
         android:src="@drawable/ic_social_feather_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

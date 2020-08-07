@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.socialfeathers.app.CauseDetailsActivity">
+
+    <item
+        android:id="@+id/action_share"
+        android:title="@string/action_share"
+        android:icon="@drawable/ic_baseline_share_24"
+        android:iconTint="@color/shareIconBackgroundColor"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_bookmark"
+        android:title="@string/action_bookmark"
+        android:icon="@drawable/ic_baseline_bookmark_24"
+        android:iconTint="@color/bookmarkIconColor"
+        app:showAsAction="ifRoom"/>
+</menu>

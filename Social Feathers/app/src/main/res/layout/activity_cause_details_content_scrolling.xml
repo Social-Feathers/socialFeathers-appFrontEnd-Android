@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CauseDetailsActivity"
+    tools:showIn="@layout/activity_cause_details">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/causeDetailsUserPicCard"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="20dp">
+
+            <ImageView
+                android:id="@+id/causeDetailsUserPic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic_2" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/causeDetailsUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/causeDetailsUserPicCard"
+            android:layout_toEndOf="@+id/causeDetailsUserPicCard"
+            android:layout_alignParentEnd="true"
+            android:ellipsize="end"
+            android:paddingTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:singleLine="true"
+            android:text="@string/label_username_temp"
+            android:textAppearance="@style/TextAppearance.Activity.Title"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/causeDetailsDateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/causeDetailsUsername"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/causeDetailsAddressLabel"
+            android:paddingStart="10dp"
+            android:paddingEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/label_date"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.Activity.Info"/>
+
+        <TextView
+            android:id="@+id/causeDetailsDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/causeDetailsUsername"
+            android:layout_toEndOf="@+id/causeDetailsDateLabel"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="10dp"
+            android:paddingEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/label_date_temp"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.Activity.Info"/>
+
+        <TextView
+            android:id="@+id/causeDetailsAddressLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/causeDetailsDateLabel"
+            android:layout_alignParentStart="true"
+            android:paddingStart="10dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/label_address"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.Activity.Info"/>
+
+        <TextView
+            android:id="@+id/causeDetailsAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/causeDetailsDateLabel"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/causeDetailsAddressLabel"
+            android:paddingStart="10dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/label_address_temp"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.Activity.Info"/>
+
+        <TextView
+            android:id="@+id/causeDetailsDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/causeDetailsAddress"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.Activity.Description"
+            android:text="@string/large_text"/>
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>
