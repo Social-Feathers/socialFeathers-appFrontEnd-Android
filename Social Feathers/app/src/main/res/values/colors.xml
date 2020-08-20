@@ -12,4 +12,15 @@
     <color name="shareIconColor">#FFFFFF</color>
     <color name="bookmarkIconColor">#dd3300</color>
     <color name="clearTextIconColor">#DD0000</color>
+
+    <color name="fragmentProfileAddress">#2F7092</color>
+    <color name="fragmentProfileFollowers">#0D5D98</color>
+    <color name="fragmentProfileHeadings">#3797CF</color>
+    <color name="fragmentProfileSolidCircle">#AAFFFFFF</color>
+    <color name="fragmentProfileCircleBorder">#50FFFFFF</color>
+    <color name="fragmentProfileGradEnd">#67EFC8</color>
+    <color name="fragmentProfileGradStart">#63C9FF</color>
+    <color name="fragmentProfileFollowersBg">#65DCE5</color>
+    <color name="fragmentProfileFollowingBg">#49BEFF</color>
+    <color name="colorGrey">#E5E5E5</color>
 </resources>
