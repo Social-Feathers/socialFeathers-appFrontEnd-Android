@@ -1,7 +1,5 @@
 package com.socialfeathers.app.ui.home;
 
-import com.socialfeathers.app.CauseData;
-
 import java.util.ArrayList;
 import java.util.List;
 

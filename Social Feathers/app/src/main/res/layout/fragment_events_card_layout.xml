@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:backgroundTint="@color/cardview_light_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/eventsCardHeader"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/background_rectangle_header">
+
+            <TextView
+                android:id="@+id/eventsCardTitle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/eventsCardBookmarkButton"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="User Name Here"
+                android:textAppearance="@style/TextAppearance.Card.Username"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <ImageButton
+                android:id="@+id/eventsCardBookmarkButton"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_baseline_bookmark_24"
+                android:tint="@color/bookmarkIconColor"
+                android:background="@drawable/background_transparent"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/eventsCardPreviewImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/eventsCardHeader"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pic_1" />
+
+        <ImageButton
+            android:id="@+id/eventsCardShareButton"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/eventsCardPreviewImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="-15dp"
+            android:textAlignment="center"
+            android:src="@drawable/ic_baseline_share_24"
+            android:tint="@color/shareIconColor"
+            android:background="@drawable/background_oval"/>
+
+        <TextView
+            android:id="@+id/eventsCardDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/eventsCardPreviewImage"
+            android:layout_above="@+id/eventsCardJoinButton"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:paddingTop="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/cardview_dark_background"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.Card.Description"
+            android:text="@string/large_text"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/eventsCardJoinButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/button_text_join"
+            android:textColor="@color/colorPrimaryDark"
+            app:backgroundTint="@color/colorWhite90"
+            app:strokeColor="@color/colorPrimaryDark"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

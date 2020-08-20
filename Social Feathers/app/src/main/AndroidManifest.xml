@@ -33,7 +33,8 @@
             android:theme="@style/HomeTheme" />
         <activity
             android:name=".AddCauseActivity"
-            android:label=""
+            android:label="Add Cause"
+            android:parentActivityName=".HomeActivity"
             android:theme="@style/AddCauseTheme" />
     </application>
     <uses-feature android:name="android.hardware.camera" />

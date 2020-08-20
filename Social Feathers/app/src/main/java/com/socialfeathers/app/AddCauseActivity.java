@@ -17,9 +17,10 @@ public class AddCauseActivity extends AppCompatActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 1;
     private Uri imageUri;
 
-    EditText title, description;
-    Button captureButton, uploadImageButton;
-    ImageView previewImage;
+    private EditText title, description;
+    private Button captureButton, uploadImageButton;
+    private ImageView previewImage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

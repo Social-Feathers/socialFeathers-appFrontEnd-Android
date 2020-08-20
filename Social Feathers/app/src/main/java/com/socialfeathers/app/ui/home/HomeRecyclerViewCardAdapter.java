@@ -8,7 +8,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.socialfeathers.app.CauseData;
 import com.socialfeathers.app.CauseDetailsActivity;
 import com.socialfeathers.app.R;
 

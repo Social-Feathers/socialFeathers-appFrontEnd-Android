@@ -31,7 +31,7 @@ import androidx.core.app.ActivityCompat;
 public class GPSProvider {
 
     // LocationRequest Config Constants
-    private static final int MAX_GPS_UPDATE_INTERVAL = 10;
+    private static final int MAX_GPS_UPDATE_INTERVAL = 5;
     private static final int FASTEST_GPS_UPDATE_INTERVAL = 2;
 
     // Geo-coder Config variables
@@ -164,7 +164,7 @@ public class GPSProvider {
                     public void onSuccess(Location location) {
 
                         setLocationValues(location);
-                        Log.e(TAG, "onSuccess: " );
+                        Log.e(TAG, "onSuccess [getLatestGPSLocation()]: location obtained." );
                     }
                 });
             } else {

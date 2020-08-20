@@ -1,22 +1,4 @@
 <resources>
-    <string name="app_name">Social Feathers</string>
-    <string name="title_home">Home</string>
-    <string name="title_events">Events</string>
-    <string name="title_profile">Profile</string>
-    <string name="title_add_event">Add Event</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="GPS_AlertDialog_Message">Your GPS seems to be disabled! This app uses GPS to get the location information of the events and user only. This app will function properly only if the GPS is turned on. Do YOu want to turn on GPS?</string>
-    <string name="AlertDialog_Yes">Yes</string>
-    <string name="AlertDialog_No">No</string>
-    <string name="AlertDialog_Cancel">Cancel</string>
-    <string name="AlertDialog_Ok">Ok</string>
-    <string name="hint_title">Title</string>
-    <string name="hint_description">Description</string>
-    <string name="hint_uploadImage">Upload Image</string>
-    <string name="hint_captureImage">Capture Image</string>
-    <string name="buttonText_add_event">Add Event</string>
-    <string name="title_read_more_button">Read more</string>
-    <string name="title_activity_add_cause">Post Cause</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
@@ -106,6 +88,30 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="small_text">
+    "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+    "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+    "technologically advanced and open to imagination and magic."
+    </string>
+    <string name="app_name">Social Feathers</string>
+    <string name="title_home">Home</string>
+    <string name="title_events">Events</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_add_event">Add Event</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="GPS_AlertDialog_Message">Your GPS seems to be disabled! This app uses GPS to get the location information of the events and user only. This app will function properly only if the GPS is turned on. Do YOu want to turn on GPS?</string>
+    <string name="AlertDialog_Yes">Yes</string>
+    <string name="AlertDialog_No">No</string>
+    <string name="AlertDialog_Cancel">Cancel</string>
+    <string name="AlertDialog_Ok">Ok</string>
+    <string name="hint_title">Title</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_location">Location</string>
+    <string name="hint_uploadImage">Upload Image</string>
+    <string name="hint_captureImage">Capture Image</string>
+    <string name="button_text_add_event">Add Event</string>
+    <string name="title_read_more_button">Read more</string>
+    <string name="title_activity_add_cause">Post Cause</string>
     <string name="action_share">Share</string>
     <string name="label_date">Date:</string>
     <string name="label_date_temp">dd/mm/yyyy</string>
@@ -114,5 +120,9 @@
     <string name="label_username_temp">Username Here</string>
     <string name="label_title_temp">Title Text Here</string>
     <string name="action_bookmark">Bookmark</string>
+    <string name="title_create_a_cause">Create a Cause?</string>
+    <string name="message_create_a_cause">Are you sure you want to create a new cause?</string>
+    <string name="button_text_join">Join</string>
+    <string name="alert_icon">Alert Icon</string>
 
 </resources>

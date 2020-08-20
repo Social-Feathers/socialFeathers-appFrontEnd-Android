@@ -1,4 +1,4 @@
-package com.socialfeathers.app;
+package com.socialfeathers.app.ui.home;
 
 public class CauseData {
 

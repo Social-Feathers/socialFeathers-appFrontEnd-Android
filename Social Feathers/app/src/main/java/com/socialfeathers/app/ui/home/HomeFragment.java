@@ -13,7 +13,6 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.socialfeathers.app.CauseData;
 import com.socialfeathers.app.R;
 
 import java.util.List;
@@ -26,7 +25,6 @@ public class HomeFragment extends Fragment {
         homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
         View homeFragmentRootView = inflater.inflate(R.layout.fragment_home, container, false);
-
 
         RecyclerView homeRecyclerView = homeFragmentRootView.findViewById(R.id.homeFragmentRecyclerView);
         homeRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
